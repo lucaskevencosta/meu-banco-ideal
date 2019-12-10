@@ -1,0 +1,297 @@
+@charset "utf-8";
+/* CSS Document */
+/*Esse CSS tem a definição de todas as páginas*/
+
+/*reset*/
+html, body, ul, ol, li, form, fieldset, legend {
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: arial, sans-serif !important;
+}
+header{
+	width: 100%;
+}
+body{
+	margin: 0 auto;
+	width: 100%;
+}
+body *{	
+	padding: 0;
+	margin: 0;
+}
+
+/*Define limite da página, alinhamento, borda*/
+#wrap{
+	max-width: 1100px;
+	width: auto;
+	min-height: 99%;
+	margin: 0 auto;	
+	border: 1px solid;
+	border-color: rgb(200,200,200);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	margin-bottom: 5px;
+}
+/*Como o fundo da primeira página é diferente das outras, usamos uma classe diferente pra primeira*/
+.fundo{
+	background-image: url(imgs/fundo.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 70%;
+}
+.fundo2{
+	background-image: url(imgs/fundo2.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 70%;
+}
+/*Define estilo do título interno da página*/
+#titulo{
+	margin-top: 50px;
+	padding: 20px;
+	background-color: rgb(50, 50, 50);
+	color: white;
+	font-size: large;
+}
+#logo img{
+	position: absolute;
+	max-width: 80px;
+	margin-top: -20px;
+}
+h1{
+	text-align: center;
+	font-weight: normal;
+}
+/*Define onde o conteúdo ficará visível*/
+#conteudo {
+	text-align: center;
+	margin-top: 50px;
+	min-height: calc(70vh);
+
+	overflow: auto;
+}
+#conteudo p {
+	text-align: center;
+	font-size: large;
+}
+/*Define estilo do botão da primeira página*/
+.botao {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 10%;
+	text-align: center;
+	width: 120px;
+}
+.botao button {
+	font-size: large;
+	background-color: white;
+	border-radius: 10px;
+	width: 120px;
+	line-height: 50px;
+	display: inline-block;
+	cursor: pointer;
+}
+/*Animação quando passa o mouse sobre o bõtão (:hover)*/
+.botao button:hover{
+	background-color: gray;
+	color: white;
+}
+/*Utilizando botões nas páginas secundárias, porém em forma de divs, que foram chamadas de boxbotton*/
+/*O box é o que define o tamanho das "colunas" e sua disposição na tela*/
+.box{
+	position: relative;
+	display: inline-table;
+	width: 17.5%;
+	padding-left: 25px;
+	padding-right: 25px;
+	vertical-align: top;
+	text-align: left;
+}
+/*Estilos dos 3 botões que ficam acima dos 4 botões na página 2*/
+.tipo1{
+	width: 24.9%;
+}
+
+.boxbotton {
+	margin-bottom: 30px;
+	font-size: large;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	width: 120px;
+	line-height: 50px;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	width: 100%;
+}
+.boxbotton:hover{
+	border-color: blue;
+}
+.boxbotton img{
+	position: relative;
+	margin-top: 5px;
+	margin-bottom: -10px;
+}
+.formulariobox{
+	font-size: small;
+}
+/*Coluna à esquerda (página3)*/
+#column-left{
+	width: 17%;
+	position: relative;
+	float: left;
+	border-right: 1px solid gray;
+	z-index: 1;
+	min-height: calc(70vh);
+	margin-left: 20px;
+	text-align: left;
+}
+#column-left p{
+	text-align: left;
+	font-weight: bold;
+	font-size: medium;
+}
+.resultado{
+	float: right;
+	margin-right: 25px;
+	width: 77%;
+	position: relative;
+	text-align: justify;
+	border-bottom: 1px solid gray;
+	padding-bottom: 40px;
+	margin-bottom: 20px;
+}
+.resultado::last-child{
+	margin-bottom: 0px;
+	border-bottom: none;
+}
+.resultado .nomebanco{
+	text-align: left !important;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: medium;
+}
+.resultado .texto{
+	float: left;
+	width: 55%;
+}
+.resultado .sistema{
+	position: relative;
+	float: right;
+}
+/*Como não está pegando do banco, essa definição tira a borda do ultimo item da pesquisa*/
+.ultimo{
+	border-bottom: none;
+}
+.resultado .avaliacao{
+	position: relative;
+	width: 40%;
+	float: right;
+}
+.avaliacao .contador{
+	float: right;
+	width: 150px;
+	line-height: 30px;
+	background: gray;
+	font-size: small;
+	text-align: center;
+	color: white;
+}
+/*AQUI PRA BAIXO É O CSS para a barrinha*/
+input[type=range] {
+	height: 25px;
+	-webkit-appearance: none;
+	margin: 10px 0;
+	width: 100%;
+	background-color: transparent !important;
+}
+input[type=range]:focus {
+	outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: black;
+	border-radius: 1px;
+	border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 0px 0px #000000;
+	border: 1px solid gray;
+	height: 18px;
+	width: 18px;
+	border-radius: 25px;
+	background: gray;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #2497E3;
+}
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #2497E3;
+	border-radius: 1px;
+	border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+	box-shadow: 0px 0px 0px #000000;
+	border: 1px solid #2497E3;
+	height: 18px;
+	width: 18px;
+	border-radius: 25px;
+	background: #A1D0FF;
+	cursor: pointer;
+}
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 5px;
+	cursor: pointer;
+	animate: 0.2s;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+	background: #2497E3;
+	border: 0px solid #000000;
+	border-radius: 2px;
+	box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+	background: #2497E3;
+	border: 0px solid #000000;
+	border-radius: 2px;
+	box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+	margin-top: 1px;
+	box-shadow: 0px 0px 0px #000000;
+	border: 1px solid #2497E3;
+	height: 18px;
+	width: 18px;
+	border-radius: 25px;
+	background: #A1D0FF;
+	cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+	background: #2497E3;
+}
+input[type=range]:focus::-ms-fill-upper {
+	background: #2497E3;
+}

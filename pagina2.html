@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<!--Comment 1: Cor da barra do navegador-->
+	<meta name="theme-color" content="#5F5F5F"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="#5F5F5F"/>
+	<meta name="msapplication-navbutton-color" content="#5F5F5F"/>
+	<!--Fim comment 1-->
+
+	<!--Comment 2: Codificação da página e cache -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+	<meta http-equiv="pragma" content="no-cache" />
+	<!--Fim comment 2-->
+
+	<!--Comment 3: Titulo que fica na barra do navegador-->
+	<title>Meu Banco Ideal</title>
+	<!--Fim Comment 3-->
+
+	<!--Comment 4: Definição do local dos arquivos de estilos (css)-->
+	<link rel="stylesheet" href="banco.css" />
+	<!--Fim Comment 4-->
+
+	<!--Comment 5: Icone que fica na barra do navegador, ao lado do link-->
+	<link rel="icon" href="imgs/icone.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="imgs/icone.ico" type="image/x-icon"/>
+	<!--Fim Comment 5-->
+
+</head>
+
+<!--Aqui começa o site-->
+<body>
+
+	<!--A div WRAP é a que define o tamanho máximo e o alinhamento da página-->
+	<div id="wrap" class="fundo2">
+
+		<div id="titulo">
+			<div id="logo">
+				<img src="imgs/logo.png"/>
+			</div>
+			<h1>Pesquisa Detalhada</h1>
+		</div>
+
+			<!--Pular linha para próximos box-->
+			<br><br>
+
+			<div class="box">
+				<a href="#"><div class="boxbotton"><p><img src="imgs/icon1.png"/>Agilidade</p></div></a>
+				
+				<center>
+					<form class="formulariobox" method="post">
+						<input type="range" min="0" max="100" step="10" value="30" id="range" />
+					</form>
+				</center>
+
+				<br><br>
+				<form class="formulariobox" method="post">
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op10"/> Menor tempo p/ transferência
+					<br><br>
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op20"/> Praticidade p/ realizar transferência
+					<br><br>
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op30"/> Melhores atendimentos
+				</form>
+			</div>
+
+			<div class="box">
+				<a href="#"><div class="boxbotton"><p><img src="imgs/icon2.png"/>Economia</p></div></a>
+				<center>
+					<form class="formulariobox" method="post">
+						<input type="range" min="0" max="100" step="10" value="30" id="range" />
+					</form>
+				</center>
+
+				<br><br>
+				<form class="formulariobox" method="post">
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op11"/> Inicio de Relacionamento
+					<br><br>
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op21"/> TED via Aplicativo
+					<br><br>
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op11"/> Saques
+					<br><br>
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op11"/> Extratos / Saldos
+					<br><br>
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op31"/> Anuidade Cartão Básico
+				</form>
+			</div>
+
+			<div class="box">
+				<a href="#"><div class="boxbotton"><p><img src="imgs/icon3.png"/>Rentabilidade</p></div></a>
+				
+				<center>
+					<form class="formulariobox" method="post">
+						<input type="range" min="0" max="100" step="10" value="30" id="range" />
+					</form>
+				</center>
+
+				<br><br>
+				<form class="formulariobox" method="post">
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op13"/> Renda Fixa
+					<br><br>
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op23"/> Renda Variável
+					<br><br>
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op33"/> Liquidez Diária
+				</form>
+			</div>
+
+			<div class="box">
+				<a href="#"><div class="boxbotton"><p><img src="imgs/icon4.png"/>Segurança</p></div></a>
+				
+				<center>
+					<form class="formulariobox" method="post">
+						<input type="range" min="0" max="100" step="10" value="30" id="range" />
+					</form>
+				</center>
+
+				<br><br>
+				<form class="formulariobox" method="post">
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op14"/> Seguro FGC
+					<br><br>
+					<INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op24"/> Acesso Seguro
+				</form>
+			</div>
+
+			<br><br>
+			<br><br>
+			<br><br>
+			<!--Como estamos usando formulários, vamos submeter os dados com um botão-->
+			<div class="box">
+				<form class="formulariobox" action="pagina3.html" method="post">
+					<button class="boxbotton" style="border-radius: 500px" type="submit">Pesquisar</button>
+				</form>
+			</div>
+		</div>
+
+	</div>
+</body>
