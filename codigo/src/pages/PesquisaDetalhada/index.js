@@ -29,7 +29,7 @@ export default function PesquisaDetalhada() {
     
     return(
         <>
-            <Header />
+            <Header texto="Pesquisa Detalhada" />
             <ContentStyle>
                 <BoxStyle>
                     <a href="#">

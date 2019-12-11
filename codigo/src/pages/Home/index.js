@@ -8,11 +8,11 @@ import imgFundo from '../../imagens/fundo.jpg'
 export default function Home() {
     return(
         <>
-            <Header />
+            <Header texto="Meu Banco Ideal" />
             
             <ContentStyle>
                 <h3>Descubra qual é o banco que atende melhor as suas necessidades...</h3>
-                <Link to="/pesquisa-detalhada">
+                <Link to="/melhor-para-voce">
                     <ButtonStyle>
                         Comparar
                     </ButtonStyle>
