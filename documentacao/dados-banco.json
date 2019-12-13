@@ -1,0 +1,157 @@
+{
+  "Extrato-Saldo" : [ {
+    "Banco" : "Itau",
+    "Nota" : 1
+  }, {
+    "Banco" : "BB",
+    "Nota" : 1
+  }, {
+    "Banco" : "Bradesco",
+    "Nota" : 1
+  }, {
+    "Banco" : "Caixa",
+    "Nota" : 1
+  }, {
+    "Banco" : "Santander",
+    "Nota" : 1
+  }, {
+    "Banco" : "Nubank",
+    "Nota" : 3
+  }, {
+    "Banco" : "Inter",
+    "Nota" : 1
+  }, {
+    "Banco" : "Original",
+    "Nota" : 2
+  }, {
+    "Banco" : "Neon",
+    "Nota" : 3
+  }, {
+    "Banco" : "Next",
+    "Nota" : 3
+  } ],
+  "Saques" : [ {
+    "Banco" : "Itau",
+    "Nota" : 3
+  }, {
+    "Banco" : "BB",
+    "Nota" : 2
+  }, {
+    "Banco" : "Bradesco",
+    "Nota" : 2
+  }, {
+    "Banco" : "Caixa",
+    "Nota" : 2
+  }, {
+    "Banco" : "Santander",
+    "Nota" : 2
+  }, {
+    "Banco" : "Nubank",
+    "Nota" : 1
+  }, {
+    "Banco" : "Inter",
+    "Nota" : 1
+  }, {
+    "Banco" : "Original",
+    "Nota" : 3
+  }, {
+    "Banco" : "Neon",
+    "Nota" : 1
+  }, {
+    "Banco" : "Next",
+    "Nota" : 3
+  } ],
+  "TED" : [ {
+    "Banco" : "Itau",
+    "Nota" : 1
+  }, {
+    "Banco" : "Bradesco",
+    "Nota" : 1
+  }, {
+    "Banco" : "Caixa",
+    "Nota" : 1
+  }, {
+    "Banco" : "Santander",
+    "Nota" : 1
+  }, {
+    "Banco" : "Nubank",
+    "Nota" : 3
+  }, {
+    "Banco" : "Inter",
+    "Nota" : 3
+  }, {
+    "Banco" : "Original",
+    "Nota" : 3
+  }, {
+    "Banco" : "Neon",
+    "Nota" : 3
+  }, {
+    "Banco" : "Next",
+    "Nota" : 3
+  }, {
+    "Banco" : "BB",
+    "Nota" : 1
+  } ],
+  "anuidade-cartao" : [ {
+    "Banco" : "Itau",
+    "Nota" : 1
+  }, {
+    "Banco" : "BB",
+    "Nota" : 1
+  }, {
+    "Banco" : "Bradesco",
+    "Nota" : 2
+  }, {
+    "Banco" : "Caixa",
+    "Nota" : 2
+  }, {
+    "Banco" : "Santander",
+    "Nota" : 1
+  }, {
+    "Banco" : "Nubank",
+    "Nota" : 3
+  }, {
+    "Banco" : "Inter",
+    "Nota" : 3
+  }, {
+    "Banco" : "Original",
+    "Nota" : 1
+  }, {
+    "Banco" : "Neon",
+    "Nota" : 3
+  }, {
+    "Banco" : "Next",
+    "Nota" : 3
+  } ],
+  "inicio-relacionamento" : [ {
+    "Banco" : "Itaú",
+    "Nota" : 1
+  }, {
+    "Banco" : "BB",
+    "Nota" : 1
+  }, {
+    "Banco" : "Bradesco",
+    "Nota" : 1
+  }, {
+    "Banco" : "Caixa",
+    "Nota" : 1
+  }, {
+    "Banco" : "Santander",
+    "Nota" : 3
+  }, {
+    "Banco" : "Nubank",
+    "Nota" : 3
+  }, {
+    "Banco" : "Inter",
+    "Nota" : 3
+  }, {
+    "Banco" : "Original",
+    "Nota" : 1
+  }, {
+    "Banco" : "Neon",
+    "Nota" : 3
+  }, {
+    "Banco" : "Next",
+    "Nota" : 3
+  } ]
+}

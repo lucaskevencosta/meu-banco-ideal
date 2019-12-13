@@ -1,4 +1,5 @@
 import React, {useState, useCallback} from 'react'
+import { Link } from 'react-router-dom'
 
 import Header from '../../components/Header'
 import { ContentStyle, BoxStyle, BoxBotton, ButtonPesquisar } from './style'
@@ -15,16 +16,23 @@ export default function PesquisaDetalhada() {
     const [saque, setNewSaque] = useState(false)
     const [extrato, setNewExtrato] = useState(false)
     const [anuidade, setNewAnuidade] = useState(false)
+    const [toNextPage, setNewToNextPage] = useState(false)
+    const [form, setNewForm] = useState({})
     
 
     const handleSubmit = useCallback((e)=>{
         e.preventDefault()
-        console.log("peso " + peso + "\n")
-        console.log("inicioRelacionamento " + inicioRelacionamento + "\n")
-        console.log("ted " + ted + "\n")
-        console.log("saque " + saque + "\n")
-        console.log("extrato " + extrato + "\n")
-        console.log("anuidade " + anuidade + "\n")
+
+
+        // setNewForm({
+        //     peso: peso,
+        //     inicioRelacionamento: inicioRelacionamento,
+        //     ted: ted,
+        //     saque: saque,
+        //     extrato: extrato,
+        //     anuidade: anuidade,
+        // })
+
     }, [peso, inicioRelacionamento, ted, saque, extrato, anuidade])
     
     return(
@@ -73,51 +81,88 @@ export default function PesquisaDetalhada() {
                         <center>
                             <input type="range" min="1" max="3" step="1"
                                 value={peso}
-                                onChange={(e)=>setNewPeso(e.target.value)} />
+                                onChange={(e)=> {
+                                    setNewPeso(e.target.value)
+                                    localStorage.setItem('peso', peso)
+                                }
+                            }/>
                         </center>
                         <br/><br/>
 
                         <input type="checkbox" name="OPCAO"
                             value={inicioRelacionamento}
-                            onChange={()=>setNewInicioRelacionamento(()=>{
-                                if(inicioRelacionamento){return false}
-                                else {return true}
-                            })}
-                            /> Inicio de Relacionamento
+                            onChange={()=> {
+                                debugger
+                                let newValue;
+                                if(inicioRelacionamento){
+                                    newValue = false;
+                                }
+                                else {
+                                    newValue = true;
+                                }
+
+                                console.log(inicioRelacionamento)
+                                console.log(true)
+                                setNewInicioRelacionamento(newValue)
+                                localStorage.setItem('inicioRelacionamento', newValue)
+
+                            }}/> Inicio de Relacionamento
                         <br/><br/>
 
                         <input type="checkbox" name="OPCAO" 
                             value={ted}
-                            onChange={()=>setNewTed(()=>{
-                                if(ted){return false}
-                                else {return true}
-                            })}/> TED via Aplicação
+                            onChange={()=> {
+                                    setNewTed(()=>{
+                                        if(ted){return false}
+                                        else {return true}
+                                    })
+
+                                    localStorage.setItem('ted', ted)
+                                }
+                            }/> TED via Aplicação
                         <br/><br/>
 
                         <input type="checkbox" name="OPCAO" 
                             value={saque} 
-                            onChange={(e)=>setNewSaque(()=>{
-                                if(saque){return false}
-                                else{return true}
-                            })} /> Saques
+                            onChange={(e)=> {
+                                    setNewSaque(()=>{
+                                        if(saque){return false}
+                                        else{return true}
+                                    })
+                                    
+                                    localStorage.setItem('saque', saque)
+                                }
+                            }/> Saques
                         <br/><br/>
 
                         <input type="checkbox" name="OPCAO" 
                             value={extrato}
-                            onChange={(e)=>setNewExtrato(()=>{
-                                if(extrato){return false}
-                                else{return true}
-                            })} /> Extratos / Saldos
+                            onChange={(e)=> {
+                                    setNewExtrato(()=>{
+                                        if(extrato){return false}
+                                        else{return true}
+                                    })
+
+                                    localStorage.setItem('extrato', extrato)
+                                }
+                            }/> Extratos / Saldos
                         <br/><br/>
 
                         <input type="checkbox" name="OPCAO" 
                             value={anuidade}
-                            onChange={()=>setNewAnuidade(()=>{
-                                if(anuidade){return false}
-                                else {return true}
-                            })} /> Anuidade Cartão Básico
+                            onChange={()=> {
+                                    setNewAnuidade(()=>{
+                                        if(anuidade){return false}
+                                        else {return true}
+                                    })
 
-                        <ButtonPesquisar type="submit" >Pesquisar</ButtonPesquisar>
+                                    localStorage.setItem('anuidade', anuidade)
+                                }
+                            }/> Anuidade Cartão Básico
+                        
+                        <Link to="/resultado-da-pesquisa">
+                            <ButtonPesquisar type="submit">Pesquisar</ButtonPesquisar>
+                        </Link>
                     </form>
 
                 </BoxStyle>
