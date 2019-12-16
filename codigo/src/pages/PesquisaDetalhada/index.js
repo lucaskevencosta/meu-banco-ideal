@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
 import Header from '../../components/Header'
@@ -16,24 +16,11 @@ export default function PesquisaDetalhada() {
     const [saque, setNewSaque] = useState(false)
     const [extrato, setNewExtrato] = useState(false)
     const [anuidade, setNewAnuidade] = useState(false)
-    const [toNextPage, setNewToNextPage] = useState(false)
-    const [form, setNewForm] = useState({})
     
 
-    const handleSubmit = useCallback((e)=>{
-        e.preventDefault()
-
-
-        // setNewForm({
-        //     peso: peso,
-        //     inicioRelacionamento: inicioRelacionamento,
-        //     ted: ted,
-        //     saque: saque,
-        //     extrato: extrato,
-        //     anuidade: anuidade,
-        // })
-
-    }, [peso, inicioRelacionamento, ted, saque, extrato, anuidade])
+    useEffect(()=>{
+        localStorage.clear()
+    }, [])
     
     return(
         <>
@@ -77,7 +64,7 @@ export default function PesquisaDetalhada() {
                         </BoxBotton>
                     </a>
                     
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={()=>{}}>
                         <center>
                             <input type="range" min="1" max="3" step="1"
                                 value={peso}
@@ -92,17 +79,14 @@ export default function PesquisaDetalhada() {
                         <input type="checkbox" name="OPCAO"
                             value={inicioRelacionamento}
                             onChange={()=> {
-                                debugger
-                                let newValue;
+                                let newValue
                                 if(inicioRelacionamento){
-                                    newValue = false;
+                                    newValue = false
                                 }
                                 else {
-                                    newValue = true;
+                                    newValue = true
                                 }
 
-                                console.log(inicioRelacionamento)
-                                console.log(true)
                                 setNewInicioRelacionamento(newValue)
                                 localStorage.setItem('inicioRelacionamento', newValue)
 
@@ -112,53 +96,69 @@ export default function PesquisaDetalhada() {
                         <input type="checkbox" name="OPCAO" 
                             value={ted}
                             onChange={()=> {
-                                    setNewTed(()=>{
-                                        if(ted){return false}
-                                        else {return true}
-                                    })
-
-                                    localStorage.setItem('ted', ted)
+                                let newValue
+                                    
+                                if(ted){
+                                    newValue = false
                                 }
-                            }/> TED via Aplicação
+                                else {
+                                    newValue = true
+                                }
+
+                                setNewTed(newValue)
+                                localStorage.setItem('ted', newValue)
+                            }}/> TED via Aplicação
                         <br/><br/>
 
                         <input type="checkbox" name="OPCAO" 
                             value={saque} 
                             onChange={(e)=> {
-                                    setNewSaque(()=>{
-                                        if(saque){return false}
-                                        else{return true}
-                                    })
-                                    
-                                    localStorage.setItem('saque', saque)
+                                let newValue
+
+                                if(saque){
+                                    newValue = false
                                 }
-                            }/> Saques
+                                else{
+                                    newValue = true
+                                }
+                                    
+                                setNewSaque(newValue)
+                                localStorage.setItem('saque', newValue)
+                            }}/> Saques
                         <br/><br/>
 
                         <input type="checkbox" name="OPCAO" 
                             value={extrato}
                             onChange={(e)=> {
-                                    setNewExtrato(()=>{
-                                        if(extrato){return false}
-                                        else{return true}
-                                    })
-
-                                    localStorage.setItem('extrato', extrato)
+                                let newValue
+                                
+                                if(extrato){
+                                    newValue = false
                                 }
-                            }/> Extratos / Saldos
+                                else{
+                                    newValue = true
+                                }
+
+                                setNewExtrato(newValue)
+                                localStorage.setItem('extrato', newValue)
+                            }}/> Extratos / Saldos
                         <br/><br/>
 
                         <input type="checkbox" name="OPCAO" 
                             value={anuidade}
                             onChange={()=> {
-                                    setNewAnuidade(()=>{
-                                        if(anuidade){return false}
-                                        else {return true}
-                                    })
+                                let newValue
 
-                                    localStorage.setItem('anuidade', anuidade)
+                                if(anuidade){
+                                    newValue = false
                                 }
-                            }/> Anuidade Cartão Básico
+                                else {
+                                    newValue = true
+                                }
+
+                                setNewAnuidade(newValue)
+                                localStorage.setItem('anuidade', newValue)
+                            }}/> Anuidade Cartão Básico
                         
                         <Link to="/resultado-da-pesquisa">
                             <ButtonPesquisar type="submit">Pesquisar</ButtonPesquisar>
