@@ -4,7 +4,7 @@ import Header from '../../components/Header'
 import CriteriosPesquisa from './CriteriosPesquisa'
 import AvaliacoesBancos from './AvaliacoesBancos'
 
-import { ContentStyle, LeftColumnStyle, rightColumnStyle } from './style'
+import { ContentStyle, LeftColumnStyle, RightColumnStyle } from './style'
 
 export default function Home() {
 
@@ -17,9 +17,9 @@ export default function Home() {
                     <CriteriosPesquisa />
                 </LeftColumnStyle>
 
-                <rightColumnStyle>
+                <RightColumnStyle>
                     <AvaliacoesBancos />
-                </rightColumnStyle>
+                </RightColumnStyle>
             </ContentStyle>
         </>
     )

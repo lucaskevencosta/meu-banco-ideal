@@ -1,22 +1,20 @@
 import styled from 'styled-components'
 
 export const ContentStyle = styled.div`
-    display: grid-inline;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "criterios avaliacoes";
+    margin: 0 10vh 0 10vh;
+    padding: 5vh 0;
+    justify-content: center;
+    grid-gap: 5px;
 `
 
 export const LeftColumnStyle = styled.div`
-    height: auto;
-    float: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 30px 50px;
+    grid-area: criterios;
 `
 
-export const rightColumnStyle = styled.div`
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 30px 50px;
+export const RightColumnStyle = styled.div`
+    grid-area: avaliacoes;
+    background: #99f;
 `

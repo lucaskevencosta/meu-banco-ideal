@@ -1,12 +1,18 @@
 import styled from 'styled-components'
 
 export const ContentStyle = styled.div`
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-right: 3px solid #000;
+    border-left: 0.3px solid #000;
+
+    h3, input {
+        margin-left: 3vw;
+    }
 
     h3 {
-        padding: 100px 0px;
+        margin-bottom: 3vh;
+    }
+
+    input {
+        margin-bottom: 1vh;
     }
 `
