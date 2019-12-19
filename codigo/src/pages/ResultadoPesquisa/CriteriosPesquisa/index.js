@@ -22,37 +22,37 @@ export default function CriteriosPesquisa() {
                 <input 
                     type="checkbox" 
                     disabled 
-                    checked={objCriterioList.peso} />Peso
+                    checked={!!objCriterioList.peso} />Peso
                 <br />
 
                 <input 
                     type="checkbox" 
                     disabled 
-                    checked={objCriterioList.inicioRelacionamento} />Inicio do Relacionamento
+                    checked={!!objCriterioList.inicioRelacionamento} />Inicio do Relacionamento
                 <br />
 
                 <input
                     type="checkbox" 
                     disabled 
-                    checked={objCriterioList.ted} /> TED
+                    checked={!!objCriterioList.ted} /> TED
                 <br />
 
                 <input
                     type="checkbox" 
                     disabled 
-                    checked={objCriterioList.saque} /> Saque
+                    checked={!!objCriterioList.saque} /> Saque
                 <br />
                 
                 <input
                     type="checkbox" 
                     disabled 
-                    checked={objCriterioList.extrato} /> Extrato
+                    checked={!!objCriterioList.extrato} /> Extrato
                 <br />
 
                 <input
                     type="checkbox" 
                     disabled 
-                    checked={objCriterioList.anuidade} /> Anuidade
+                    checked={!!objCriterioList.anuidade} /> Anuidade
                 <br />
             </ContentStyle>
         </>
